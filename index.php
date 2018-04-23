@@ -51,20 +51,20 @@
 </form>
 -->
 
-<form method="post" action="">
-<table class="table table-hover">
-<tr>
-<td>Medicine Name</td>
-<td><input type="text" class="form-control" name="name" placeholder="Enter Medicine name"></td>
-</tr>
-<tr>
-<td>Quantity</td>
-<td><input type="text" class="form-control" name="qty" placeholder="Enter Quantity"></td>
-</tr>
-<tr>
-<td colspan="2" align="center"><input type="submit" class="btn btn-primary" name="submit" value="Store"></td>
-</tr>
-</table>
+<form  method="post" action="action.php">
+    <table class="table table-hover">
+    <tr>
+    <td>Medicine Name</td>
+    <td><input type="text" class="form-control" name="name" placeholder="Enter Medicine name"></td>
+    </tr>
+    <tr>
+    <td>Quantity</td>
+    <td><input type="text" class="form-control" name="qty" placeholder="Enter Quantity"></td>
+    </tr>
+    <tr>
+    <td colspan="2" align="center"><input type="submit" class="btn btn-primary" name="submit" value="Store"></td>
+    </tr>
+    </table>
 </form>
 
 
