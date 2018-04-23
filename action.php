@@ -14,7 +14,12 @@ class DataOperation extends Database {
         /*implod have two parametre glue = "," and pieces=array_keys($fields) implode (glue, pieces) */
         $sql .= " (".implode(",", array_keys($fields)).") VALUES ";
         $sql .= "('".implode("','", array_values($fields))."')";
-        echo $sql;
+        //echo $sql;
+        /*step 3*/
+        $query = mysqli_query($this->con, $sql);
+        if($query){
+            return true;
+        }
 
     }
 
@@ -29,7 +34,10 @@ if(isset($_POST["submit"])) {
         "qty" => $_POST["qty"]
     );
 
-    $obj->insert_record("med",$myArray);
+   /*step 4*/
+    if($obj->insert_record("med",$myArray)) {
+        header("location:index.php?msg=Record Inserted");
+    }
 
 }
 
